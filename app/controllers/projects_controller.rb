@@ -1,10 +1,11 @@
 class ProjectsController < ApplicationController
 
 def index
+  @projects = Project.for
 end
 
 def new
-  @howto = @project.howtos.build
+  @project = @project.new
 end
 
 def create
@@ -18,4 +19,5 @@ def update
 end
 
 def destroy
+end
 end
